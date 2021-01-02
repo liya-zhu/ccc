@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class S1_19_ragaman {
+public class S1_16_ragaman {
     public static void main (String[] args) {
         Scanner scan = new Scanner(System.in);
         String w1=scan.nextLine();

@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class S1_15_speed {
+public class S1_20_speed {
     static Scanner scan=new Scanner(System.in);
     public static void main (String[] args){
         int n=scan.nextInt();

@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class S1_17_village {
+public class S1_18_village {
     static Scanner scan=new Scanner(System.in);
     public static void main(String[] args) {
         int n = scan.nextInt();

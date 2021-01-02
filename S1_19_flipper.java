@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class S1_16_flipper {
+public class S1_19_flipper {
     public static void main(String[] args){
         Scanner scan=new Scanner(System.in);
         int a=1;
