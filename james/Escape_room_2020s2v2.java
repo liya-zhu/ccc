@@ -68,7 +68,7 @@ public class Escape_room_2020s2v2 {
     }
 
     static boolean escaped(int r,int c){
-        if(array[r-1][c-1]==1 || (r==1 && c ==1))
+        if(r==1 && c ==1)
             return true;
 
         if(tried[r-1][c-1])
