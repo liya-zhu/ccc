@@ -25,7 +25,7 @@ public class Escape_room_2020s2v2 {
 
     }
     public static void main(String[] args) throws FileNotFoundException {
-        String test_data_path="test_data/2020/j5_s2/";
+        String test_data_path="s2_20_data";
         File f = new File(test_data_path);
         String[] filelist =f.list();
 
@@ -75,16 +75,19 @@ public class Escape_room_2020s2v2 {
             return false;
 
         tried[r-1][c-1] = true;
-
-        int n = r*c;
-        for(int i =0;i<row;i++)
-            for(int j=0;j<col;j++){
-                if(n == array[i][j])
-                    if( escaped(i+1,j+1)==true)
-                        return true;
-                    else
-                        continue;
-            }
+        try {
+            int n = r * c;
+            for (int i = 0; i < row; i++)
+                for (int j = 0; j < col; j++) {
+                    if (n == array[i][j])
+                        if (escaped(i + 1, j + 1) == true)
+                            return true;
+                        else
+                            continue;
+                }
+        }catch (StackOverflowError e){
+            return false;
+        }
         return false;
     }
 }

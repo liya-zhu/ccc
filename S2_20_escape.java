@@ -22,6 +22,38 @@ public class S2_20_escape {
         else System.out.println("no");
 
     }
+
+    /* James solution
+    static boolean escaped(int r,int c){
+        if(r==1 && c ==1)
+            return true;
+
+        if(tried[r-1][c-1])
+            return false;
+
+        tried[r-1][c-1] = true;
+        try {
+            int n = r * c;
+            for (int i = 0; i < m; i++)
+                for (int j = 0; j < n; j++) {
+                    if (n == room[i][j])
+                        if (escaped(i + 1, j + 1) == true)
+                            return true;
+                        else
+                            continue;
+                }
+        }catch (StackOverflowError e){
+            return false;
+        }catch(ArrayIndexOutOfBoundsException e){
+            int a=1;
+        }
+
+        return false;
+    }
+     */
+
+
+    ///2nd method
     public static boolean escape(int a, int b){ //index
         if (a==0&&b==0) return true;
         int find=(a+1)*(b+1);
@@ -40,7 +72,7 @@ public class S2_20_escape {
     }
 
 
-    /*
+    /* 1st method
     public static void findfactor(int x,int[][] room){
         boolean escape=true;
         int[][] ft=new int[(int)Math.sqrt(x)][2];
