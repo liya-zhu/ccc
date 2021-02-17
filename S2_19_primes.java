@@ -1,24 +1,22 @@
 import java.util.Scanner;
 
-public class S2_20_primes {
+public class S2_19_primes {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int lines=scan.nextInt();
-        //int[] input=new int[lines];
+        int lines = scan.nextInt();
+        int[] input = new int[lines];
         int sum;
-        System.out.println();
-        for (int i=0; i<lines; i++){
-            //input[i]=scan.nextInt();
-            sum=scan.nextInt()*2;
-            for (int a=2;a<sum/2;a++){
-                int b=sum-a;
-                if (isPrime(a)&&isPrime(b)) {
+        for (int i = 0; i < lines; i++) input[i] = scan.nextInt();
+        for (int i = 0; i < lines; i++ ) {
+            sum = input[i] * 2;
+            for (int a = 2; a < sum / 2; a++) {
+                int b = sum - a;
+                if (isPrime(a) && isPrime(b)) {
                     System.out.println(a + " " + b);
                     break;
                 }
             }
         }
-
     }
     public static boolean isPrime(int a){
         boolean x=true;
